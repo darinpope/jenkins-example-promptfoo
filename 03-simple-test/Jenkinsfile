@@ -11,7 +11,9 @@ pipeline {
     }
     stage('run the evaluation') {
       steps {
-        sh 'promptfoo eval'
+        dir('03-simple-test') {
+          sh 'promptfoo eval'
+        }
       }
     }
   }

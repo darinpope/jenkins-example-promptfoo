@@ -11,7 +11,9 @@ pipeline {
     }
     stage('run the evaluation') {
       steps {
-        sh 'promptfoo eval'
+        dir('04-multiple-translations-scenarios') {
+          sh 'promptfoo eval'
+        }
       }
     }
   }

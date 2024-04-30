@@ -11,7 +11,9 @@ pipeline {
     }
     stage('run the evaluation') {
       steps {
-        sh 'promptfoo eval'
+        dir('02-simple-csv') {
+          sh 'promptfoo eval'
+        }
       }
     }
   }
