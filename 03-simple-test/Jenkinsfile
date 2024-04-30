@@ -1,0 +1,18 @@
+pipeline {
+  agent any
+  environment {
+    OPENAI_API_KEY=credentials('openai-api-key')
+  }
+  stages {
+    stage('verify promptfoo installation') {
+      steps {
+        sh 'promptfoo --version help'
+      }
+    }
+    stage('run the evaluation') {
+      steps {
+        sh 'promptfoo eval'
+      }
+    }
+  }
+}
