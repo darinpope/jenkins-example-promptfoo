@@ -2,6 +2,7 @@ pipeline {
   agent any
   environment {
     OPENAI_API_KEY=credentials('openai-api-key')
+    PROMPTFOO_PYTHON="/Library/Frameworks/Python.framework/Versions/3.11/bin/python3"
   }
   stages {
     stage('verify promptfoo installation') {
