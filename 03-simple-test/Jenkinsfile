@@ -18,4 +18,9 @@ pipeline {
       }
     }
   }
+  post {
+    always {
+      archiveArtifacts artifacts: 'output.csv', followSymlinks: false
+    }
+  }
 }
