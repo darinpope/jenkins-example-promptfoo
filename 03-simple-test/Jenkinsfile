@@ -20,7 +20,9 @@ pipeline {
   }
   post {
     always {
-      archiveArtifacts artifacts: 'output.csv', followSymlinks: false
+      dir('03-simple-test') {
+        archiveArtifacts artifacts: 'output.csv', followSymlinks: false
+      }
     }
   }
 }
