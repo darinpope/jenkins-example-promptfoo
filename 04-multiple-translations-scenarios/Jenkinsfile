@@ -17,4 +17,11 @@ pipeline {
       }
     }
   }
+  post {
+    always {
+      dir('04-multiple-translations-scenarios') {
+        archiveArtifacts artifacts: 'output.html', followSymlinks: false
+      }
+    }
+  }
 }

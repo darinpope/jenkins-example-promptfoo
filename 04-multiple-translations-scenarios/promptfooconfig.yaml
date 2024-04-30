@@ -42,3 +42,5 @@ scenarios:
           - type: similar
             value: '{{expectedHowAreYou}}'
             threshold: 0.90
+
+outputPath: output.html
