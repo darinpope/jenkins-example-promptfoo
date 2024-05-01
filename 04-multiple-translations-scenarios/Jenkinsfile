@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent { 
+    label 'promptfoo'
+  }
   environment {
     OPENAI_API_KEY=credentials('openai-api-key')
   }
